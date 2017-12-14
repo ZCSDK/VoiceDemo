@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- 语音功能布局 -->
+    <LinearLayout
+        android:id="@+id/sobot_recording_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/sobot_voice_top_image"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <!-- 语音   麦克风图片 -->
+            <ImageView
+                android:id="@+id/sobot_mic_image"
+                android:layout_width="80dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@null"
+                android:src="@drawable/sobot_recording_mike" />
+
+            <!-- 语音   录音时间太短的图片 -->
+            <ImageView
+                android:id="@+id/sobot_recording_timeshort"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/sobot_recording_timeshort"
+                android:contentDescription="@null" />
+
+            <!-- 语音   录音时的动画图片 -->
+            <ImageView
+                android:id="@+id/sobot_mic_image_animate"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginLeft="-60dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@null" />
+        </LinearLayout>
+
+        <!-- 语音   手指上滑以后,取消录音的图片 -->
+        <ImageView
+            android:id="@+id/sobot_image_endVoice"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:contentDescription="@null"
+            android:src="@drawable/sobot_recording_cancel"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/sobot_voiceTimeLong1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="倒计时"
+                android:textColor="#ffffff"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/sobot_voiceTimeLong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/sobot_voiceTimeLong1"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/sobot_recording_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="3dp"
+            android:gravity="center_horizontal"
+            android:paddingBottom="3dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="3dp"
+            android:text="手指上滑，取消发送"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>
